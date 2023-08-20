@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <script>
+     function checkArray() {
+       let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 24, 35, 6, 6, 864, 845, 824, 8];
+       for (i = 0; i < a.length; i++) {
+         for(j=1;j<a.length;j++) {
+           if (a[j] > a[j + 1]) {
+             let tempt = a[j];
+             a[j] = a[j + 1];
+             a[j + 1] = tempt;
+           }
+         }
+       }
+       document.writeln("Dãy Ban đầu qua sắp xếp"+a+"<br>");
+       for(i=0;i<a.length;i++){
+         if(a[a.length-1]!==a[i++]){
+           document.writeln("Số không lặp lại là: "+a[i]+" ");
+         }
+       }
+         }
+
+     console.log(checkArray());
+  </script>
+
+</body>
+</html>
